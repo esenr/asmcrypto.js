@@ -1,4 +1,4 @@
-function sha512_asm ( stdlib, foreign, buffer ) {
+export var sha512_asm = function ( stdlib, foreign, buffer ) {
     "use asm";
 
     // SHA512 state
@@ -3144,18 +3144,18 @@ function sha512_asm ( stdlib, foreign, buffer ) {
     }
 
     return {
-        // SHA512
-        reset: reset,
-        init: init,
-        process: process,
-        finish: finish,
+      // SHA512
+      reset: reset,
+      init: init,
+      process: process,
+      finish: finish,
 
-        // HMAC-SHA512
-        hmac_reset: hmac_reset,
-        hmac_init: hmac_init,
-        hmac_finish: hmac_finish,
+      // HMAC-SHA512
+      hmac_reset: hmac_reset,
+      hmac_init: hmac_init,
+      hmac_finish: hmac_finish,
 
-        // PBKDF2-HMAC-SHA512
-        pbkdf2_generate_block: pbkdf2_generate_block
+      // PBKDF2-HMAC-SHA512
+      pbkdf2_generate_block: pbkdf2_generate_block
     }
 }
